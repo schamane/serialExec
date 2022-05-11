@@ -1,1 +1,1 @@
-ignores: ["@tsconfig/node16", "source-map-support", "eslint", "prettier-eslint", "typescript", "microbundle", "rimraf"]
+ignores: ["@tsconfig/node16", "source-map-support", "eslint", "prettier-eslint", "typescript", "microbundle", "rimraf", "jest", "@types/jest", "src"]

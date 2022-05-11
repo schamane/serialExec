@@ -23,3 +23,4 @@ jobs:
     - run: npm run lint
     - run: npx depcheck
     - run: npm run build:check --if-present
+    - run: npm run test --if-present

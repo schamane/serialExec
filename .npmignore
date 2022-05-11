@@ -20,3 +20,4 @@ tsconfig.json
 .eslintrc
 .editorconfig
 .depcheckrc
+babel.config.js

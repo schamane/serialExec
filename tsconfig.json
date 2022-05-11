@@ -7,11 +7,14 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "outDir": "lib",
-    "rootDir": "src",
-    "declaration": true
+    "declaration": true,
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"],
+      "tests/*": ["__tests__/*"]
+    },
   },
   "exclude": [
-    "__test__",
     "node_modules",
     "lib"
   ]
