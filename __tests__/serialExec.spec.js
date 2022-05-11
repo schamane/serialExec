@@ -1,4 +1,6 @@
-import serialExec from '../';
+// Test method
+
+import serialExec from '../src/index.js';
 
 const delay = async (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
