@@ -1,0 +1,31 @@
+{
+    "editor.formatOnSave": false,
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/node_modules/": true,
+        "packages/**/node_modules/": true
+    },
+    "search.exclude": {
+        "build": true,
+        "node_modules": true
+    },
+    "eslint.validate": [
+        "typescript"
+    ],
+    "[json]": {
+        "editor.formatOnSave": true,
+    },
+    "[html]": {
+        "editor.formatOnSave": true,
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.tslint": false
+    },
+    "azureFunctions.projectRuntime": "~4",
+    "azureFunctions.projectLanguage": "TypeScript",
+    "azureFunctions.templateFilter": "Verified",
+    "azureFunctions.deploySubpath": "dist",
+    "azureFunctions.projectSubpath": "src",
+    "azureFunctions.preDeployTask": "npm: build"
+}

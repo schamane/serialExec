@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "./"
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "./node_modules/typescript/lib",
+		"javascript.preferences.importModuleSpecifierEnding": "js",
+		"typescript.preferences.importModuleSpecifierEnding": "js",
+		"typescript.referencesCodeLens.showOnAllFunctions": true,
+		"typescript.referencesCodeLens.enabled": true,
+		"typescript.implementationsCodeLens.enabled": true
+	}
+}

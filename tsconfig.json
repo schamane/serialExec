@@ -1,0 +1,18 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "strict": false,
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "outDir": "lib",
+    "rootDir": "src",
+    "declaration": true
+  },
+  "exclude": [
+    "__test__",
+    "node_modules",
+    "lib"
+  ]
+}

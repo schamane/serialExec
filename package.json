@@ -1,0 +1,61 @@
+{
+  "name": "@schamane/serial-exec",
+  "version": "1.0.0",
+  "description": "Serial execution of asynchronouse functions for javascript",
+  "type": "module",
+  "keywords": [
+    "functions",
+    "async",
+    "serial"
+  ],
+  "author": "Nazar Kulyk <nazar.kulyk@ibsolution.de>",
+  "homepage": "https://github.com/schamane/serialExec",
+  "main": "./lib/index.cjs",
+  "types": "./lib/index.d.ts",
+  "source": "src/index.ts",
+  "module": "./lib/index.mjs",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:schamane/serialExec.git"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "build-ts": "npm run clean && tsc",
+    "deps:check": "npx deepcheck",
+    "build": "npm run clean && microbundle build --raw --compress --no-sourcemap --target node --format esm,cjs",
+    "build:check": "npm run clean && tsc --noemit",
+    "watch": "npm run clean && tsc -w",
+    "lint": "eslint --ext .ts ./src",
+    "lint:fix": "eslint --fix --ext .ts ./src",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "eslint": "8.15.0",
+    "eslint-config-esnext": "^4.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unicorn": "^42.0.0",
+    "microbundle": "^0.15.0",
+    "prettier-eslint": "^14.0.2",
+    "source-map-support": "^0.5.21",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  }
+}

@@ -1,0 +1,22 @@
+lib/tests
+src/
+.buildcache/
+
+# Node.js
+.npmignore
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Git
+.git*
+.github
+
+# VScode
+*.code-workspace
+.vscode
+
+tsconfig.json
+.eslintrc
+.editorconfig
+.depcheckrc
