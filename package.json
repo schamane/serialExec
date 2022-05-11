@@ -1,6 +1,6 @@
 {
   "name": "@schamane/serial-exec",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Serial execution of asynchronouse functions for javascript",
   "type": "module",
   "keywords": [
