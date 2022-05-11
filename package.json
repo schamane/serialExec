@@ -10,6 +10,7 @@
   ],
   "author": "Nazar Kulyk <nazar.kulyk@ibsolution.de>",
   "homepage": "https://github.com/schamane/serialExec",
+  "license": "MIT",
   "main": "./lib/index.cjs",
   "types": "./lib/index.d.ts",
   "source": "src/index.ts",
