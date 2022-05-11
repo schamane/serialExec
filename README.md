@@ -6,6 +6,9 @@ Use this if serial execution of anychronouse code should be implemented.
 
 Let say you will execute HTTP request with different values not in parallel, but waiting on request is done, and also be abble to break execution.
 
+Package can be used als commonjs or esm module
+
+
 ```javascript
 import serialExec from '@schamane/serial-exec';
 
