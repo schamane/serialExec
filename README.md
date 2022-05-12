@@ -45,7 +45,7 @@ import { all, useSerialExec } from '@schamane/serial-exec';
 
 const delay = async (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const asyncFn = useSerialExec(async (ms, breakFn) => {
+const asyncFn = useSerialExec(async (breakFn, ms) => {
   if (ms > 300) {
     return breakFn();
   }
