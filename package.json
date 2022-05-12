@@ -29,6 +29,9 @@
     "type": "git",
     "url": "git+ssh://git@github.com:schamane/serialExec.git"
   },
+  "bugs": {
+    "url": "https://github.com/schamane/serialExec/issues"
+  },
   "scripts": {
     "clean": "rimraf lib",
     "build-ts": "npm run clean && tsc",
@@ -70,5 +73,8 @@
     "moduleNameMapper": {
       "src/(.*)": "<rootDir>/src/$1"
     }
+  },
+  "engines": {
+    "node": "^14.3 || >=16.0.0"
   }
 }

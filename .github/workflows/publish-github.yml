@@ -11,10 +11,10 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: '16.x'
+          node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@schamane'
       - run: npm ci
-      - run: npm publish --access=public
+      - run: npm publish --access=public --tag single
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_REGISTRY_SECRET}}
