@@ -1,4 +1,5 @@
-import serialExec from 'src/index';
+import { overParams } from 'src/overParams';
+import { delay } from 'tests/testhelper';
 
 test('serialExec should has proper typings', () => {
   interface Data {
@@ -8,17 +9,15 @@ test('serialExec should has proper typings', () => {
 
   const params: Data[] = [{ id: '1', name: 'test' }];
 
-  const delay = async () => new Promise((resolve) => setTimeout(resolve, 10));
-
   const processFn = (param: Data) => {
     return param.name;
   };
 
-  serialExec(params, async (param, breakFn) => {
+  overParams(params, async (param, breakFn) => {
     if (!param) {
       return breakFn();
     }
-    await delay();
+    await delay(10);
 
     return processFn(param);
   }).then((result) => {

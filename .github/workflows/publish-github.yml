@@ -15,6 +15,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@schamane'
       - run: npm ci
-      - run: npm publish --access=public --tag single
+      - run: npm publish --access=public --tag latest
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_REGISTRY_SECRET}}

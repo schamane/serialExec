@@ -13,6 +13,17 @@ Let say you will execute HTTP request with different values not in parallel, but
 
 Package can be used als commonjs or esm module
 
+## Breaking API changes for v2
+
+> Note
+
+We made api changes to package since v1.0, please use "single" tag on npm to use older version
+
+```bash
+npm install @schamane/serial-exec:single
+```
+
+## Usage
 
 ```javascript
 import serialExec from '@schamane/serial-exec';
@@ -39,7 +50,7 @@ await serialExec([100, 200, 400, 1000], asyncFn);
 [npm-url]: https://npmjs.org/package/@schamane/serial-exec
 [npm-image]: https://img.shields.io/npm/v/@schamane/serial-exec.svg?style=flat-square
 [download-badge]: http://img.shields.io/npm/dm/@schamane/serial-exec.svg?style=flat-square
-[install-size-image]: https://packagephobia.com/badge?p=@schamane/serial-exec
+[install-size-image]: https://packagephobia.com/badge?p=@schamane/serial-exec?style=flat-square
 [install-size-url]: https://packagephobia.now.sh/result?p=@schamane/serial-exec
 [ci-image]: https://github.com/schamane/serialExec/actions/workflows/checkcode.yml/badge.svg?branch=main
 [ci-url]: https://github.com/schamane/serialExec/actions

@@ -23,7 +23,9 @@
     "lib"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "source": "src/index.ts",
+    "main": "lib/index.cjs"
   },
   "repository": {
     "type": "git",
@@ -36,7 +38,8 @@
     "clean": "rimraf lib",
     "build-ts": "npm run clean && tsc",
     "deps:check": "npx deepcheck",
-    "build": "npm run clean && microbundle build --raw --compress --no-sourcemap --target node --format esm,cjs",
+    "build": "npm run clean && npm run build:index",
+    "build:index": "microbundle build --raw --compress --no-sourcemap --target node --format esm,cjs",
     "build:check": "npm run clean && tsc --noemit",
     "watch": "npm run clean && tsc -w",
     "lint": "eslint --ext .ts ./src",
@@ -47,7 +50,7 @@
   "devDependencies": {
     "@babel/preset-typescript": "^7.16.7",
     "@tsconfig/node16": "^1.0.2",
-    "@types/jest": "^27.5.0",
+    "@types/jest": "^27.5.1",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
     "eslint": "8.15.0",
@@ -59,7 +62,7 @@
     "eslint-plugin-unicorn": "^42.0.0",
     "jest": "^28.1.0",
     "microbundle": "^0.15.0",
-    "prettier-eslint": "^14.0.2",
+    "prettier-eslint": "^14.0.3",
     "rimraf": "^3.0.2",
     "source-map-support": "^0.5.21",
     "typescript": "^4.6.4"
@@ -71,7 +74,8 @@
     ],
     "testRegex": ".spec.ts$",
     "moduleNameMapper": {
-      "src/(.*)": "<rootDir>/src/$1"
+      "src/(.*)": "<rootDir>/src/$1",
+      "tests/(.*)": "<rootDir>/__tests__/$1"
     }
   },
   "engines": {
