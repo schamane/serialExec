@@ -25,8 +25,43 @@ npm install @schamane/serial-exec:single
 
 ## Usage
 
+There are two methods that can be used to serial execution of promises
+
+- all
+- overParams
+
+```typescript
+  async all(list: wrapedFunction[]): Promise<T[]>;
+```
+
+```typescript
+  async overParams(params: any[], fn: Function): Promise<T[]>;
+```
+
+### Usage example for all
+
 ```javascript
-import serialExec from '@schamane/serial-exec';
+import { all, useSerialExec } from '@schamane/serial-exec';
+
+const delay = async (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const asyncFn = useSerialExec(async (ms, breakFn) => {
+  if (ms > 300) {
+    return breakFn();
+  }
+  console.log(`fn ${ms} start`);
+  await delay(ms);
+  console.log(`fn ${ms} done`);
+  return ms + 1;
+});
+
+await all([asyncFn(100), asyncFn(200), asyncFn(400), asyncFn(1000)]);
+```
+
+### Usage example for overParams
+
+```javascript
+import { overParams } from '@schamane/serial-exec';
 
 const delay = async (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -40,7 +75,7 @@ const asyncFn = async (ms, breakFn) => {
   return ms + 1;
 };
 
-await serialExec([100, 200, 400, 1000], asyncFn);
+await overParams([100, 200, 400, 1000], asyncFn);
 ```
 
 ## License
