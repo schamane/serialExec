@@ -2,7 +2,6 @@
 
 [![CI][ci-image]][ci-url]
 [![npm version][npm-image]][npm-url]
-[![npm version][npm-image]][npm-url]
 [![install size][install-size-image]][install-size-url]
 [![downloads][download-badge]][npm-url]
 
