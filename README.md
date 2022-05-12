@@ -83,8 +83,8 @@ await overParams([100, 200, 400, 1000], asyncFn);
 [MIT](LICENSE.md)
 
 [npm-url]: https://npmjs.org/package/@schamane/serial-exec
-[npm-image]: https://img.shields.io/npm/v/@schamane/serial-exec.svg?style=flat-square
-[download-badge]: http://img.shields.io/npm/dm/@schamane/serial-exec.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/@schamane/serial-exec.svg
+[download-badge]: http://img.shields.io/npm/dm/@schamane/serial-exec.svg
 [install-size-image]: https://packagephobia.com/badge?p=@schamane/serial-exec
 [install-size-url]: https://packagephobia.now.sh/result?p=@schamane/serial-exec
 [ci-image]: https://github.com/schamane/serialExec/actions/workflows/checkcode.yml/badge.svg?branch=main
