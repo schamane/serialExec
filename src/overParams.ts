@@ -1,11 +1,12 @@
 import type { AsyncParamsExecFunction } from './types.js';
 
 /**
- *
+ *  overParams
  *  execute asynchronouse function with all parameters from array
  *  serial execution of functions for each parameter will be secured
  *  there is break function that can be called to break execution
  *
+ * @async
  * @param {T[]} taskParams array of params that will be passed to function
  * @param {asyncFn} fn function reference there all params from array will be passed as first argument
  * @returns {Promise<V[]>} Promise with array of result from function

@@ -1,14 +1,11 @@
 import type { BreakFunction, SerialFunction, WrappedSerialFunction } from './types.js';
 
 /**
+ * useSerialExec
+ * wrap original function to be used for serial execution
  *
- *  execute asynchronouse function with all parameters from array
- *  serial execution of functions for each parameter will be secured
- *  there is break function that can be called to break execution
- *
- * @param {T[]} taskParams array of params that will be passed to function
- * @param {asyncFn} fn function reference there all params from array will be passed as first argument
- * @returns {Promise<V[]>} Promise with array of result from function
+ * @param {T[]} fn array of params that will be passed to function
+ * @returns {WrapFunction<T, V>} wraped function that can be used in array of methods to be executed serialy
  */
 export const useSerialExec =
   <T>(fn: WrappedSerialFunction<T>) =>
@@ -18,14 +15,11 @@ export const useSerialExec =
     fn(breakFn, ...args);
 
 /**
+ *  all
+ *  execute serialy asynchronouse functions from array
  *
- *  execute asynchronouse function with all parameters from array
- *  serial execution of functions for each parameter will be secured
- *  there is break function that can be called to break execution
- *
- * @param {T[]} taskParams array of params that will be passed to function
- * @param {asyncFn} fn function reference there all params from array will be passed as first argument
- * @returns {Promise<V[]>} Promise with array of result from function
+ * @param {SerialFunction<V>[]} fnList array wraped functions with parameters that needs to be executed
+ * @returns {Promise<V[]>} Promise with array of result from serial executions
  */
 export const all = <V>(fnList: SerialFunction<V>[]): Promise<V[]> => {
   let skip = false;
